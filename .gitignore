@@ -1,26 +1,51 @@
 # ── Dependencies ────────────────────────────────────────────────────────────
 node_modules/
+frontend/node_modules/
+Backend/node_modules/
 .pnp
 .pnp.js
 
-# ── Environment Variables (NEVER commit .env with real credentials) ──────────
+# ── Environment Variables & Secrets (NEVER commit real credentials) ─────────
 .env
 .env.local
-.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+Backend/.env
+Backend/.env.local
+frontend/.env
+frontend/.env.local
 !.env.example
+!Backend/.env.example
+!frontend/.env.example
 
-# ── Build Outputs ────────────────────────────────────────────────────────────
+# ── Build & Dist Outputs ─────────────────────────────────────────────────────
 dist/
 build/
+frontend/dist/
+frontend/build/
+Backend/dist/
+Backend/build/
 .vite/
+frontend/.vite/
 *.tsbuildinfo
 
-# ── SQLite / local DB files (legacy) ────────────────────────────────────────
+# ── Deployment & Cloud Provider Caches ───────────────────────────────────────
+.vercel/
+.netlify/
+.render/
+.output/
+.serverless/
+
+# ── SQLite & Local Database Files ────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
 Backend/data/*.db
 Backend/data/*.db-shm
 Backend/data/*.db-wal
 
-# ── Logs ─────────────────────────────────────────────────────────────────────
+# ── Logs & Debugging ────────────────────────────────────────────────────────
 logs/
 *.log
 npm-debug.log*
@@ -29,9 +54,14 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# ── OS & Editor ──────────────────────────────────────────────────────────────
+# ── Testing & Coverage ───────────────────────────────────────────────────────
+coverage/
+.nyc_output/
+
+# ── OS & Editor Files ───────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
+desktop.ini
 .vscode/
 .idea/
 *.swp

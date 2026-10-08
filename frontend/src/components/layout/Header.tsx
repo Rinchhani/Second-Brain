@@ -13,9 +13,9 @@ export const Header: React.FC = () => {
             <User className="w-4 h-4 text-primary" />
           </div>
           <div className="flex flex-col">
-            <h1 className="font-headline text-lg font-bold tracking-tighter text-primary">
+          <span className="font-headline text-lg font-bold tracking-tighter text-primary">
               Obsidian
-            </h1>
+            </span>
           </div>
         </div>
 

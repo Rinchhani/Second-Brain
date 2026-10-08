@@ -72,10 +72,10 @@ export default {
         "container-max": "1440px"
       },
       fontFamily: {
-        "display": ["Geist", "sans-serif"],
-        "headline": ["Geist", "sans-serif"],
+        "display": ["Space Grotesk", "sans-serif"],
+        "headline": ["Space Grotesk", "sans-serif"],
         "body": ["Inter", "sans-serif"],
-        "mono": ["Geist Mono", "JetBrains Mono", "monospace"]
+        "mono": ["JetBrains Mono", "monospace"]
       }
     },
   },

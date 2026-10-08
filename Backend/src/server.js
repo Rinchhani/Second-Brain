@@ -19,13 +19,20 @@ const dashboardRouter       = require('./routes/dashboard');
 
 const app  = express();
 const PORT = process.env.PORT || 5000;
+const IS_PROD = process.env.NODE_ENV === 'production';
 
 // ── Connect to MongoDB Atlas ──────────────────────────────────────────────────
 connectDB();
 
+// ── CORS origins ──────────────────────────────────────────────────────────────
+// In production, set CORS_ORIGIN env var (comma-separated list of allowed origins)
+const allowedOrigins = IS_PROD
+  ? (process.env.CORS_ORIGIN || '').split(',').map(o => o.trim()).filter(Boolean)
+  : ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:4173'];
+
 // ── Middleware ────────────────────────────────────────────────────────────────
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:4173', 'http://localhost:3000'],
+  origin: allowedOrigins,
   methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));

@@ -1,0 +1,38 @@
+# ── Dependencies ────────────────────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+
+# ── Environment Variables (NEVER commit .env with real credentials) ──────────
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# ── Build Outputs ────────────────────────────────────────────────────────────
+dist/
+build/
+.vite/
+*.tsbuildinfo
+
+# ── SQLite / local DB files (legacy) ────────────────────────────────────────
+Backend/data/*.db
+Backend/data/*.db-shm
+Backend/data/*.db-wal
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ── OS & Editor ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo

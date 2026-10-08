@@ -1,6 +1,6 @@
 export type PageTab = 'dashboard' | 'vault' | 'habits' | 'engine';
 
-export type IdeaCategory = 'ALL' | 'PERSONAL' | 'WORK' | 'RESEARCH' | 'DESIGN' | 'ARCHITECTURE' | 'AI' | 'INFRA';
+export type IdeaCategory = 'ALL' | 'PERSONAL' | 'WORK' | 'RESEARCH';
 
 export interface Idea {
   id: string;
